@@ -35,3 +35,38 @@
     display: inline-block;
     font-size: 0.8rem;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input,textarea{
+    width: 100%;
+    padding: 1.5rem;
+    background: transparent;
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-primary);
+    resize: none;
+    color: var(--color-white);
+}
+
+
+/*=======Media Queries(Medium)==========*/
+
+@media screen and (max-width:1024px) {
+    .container.contact_container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+/*=======Media Queries(Small)==========*/
+
+@media screen and (max-width:600px) {
+    .container.contact_container{
+        width: var(--container-width-sm);
+        /* grid-template-columns: 1fr; */
+        /* gap: 2rem; */
+    }
+}
