@@ -11,7 +11,7 @@ const Contact = () => {
 
     const form = useRef();
 
-    const sendEmail = (e) => 
+    const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs.sendForm(env.SERVICE_ID, 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
