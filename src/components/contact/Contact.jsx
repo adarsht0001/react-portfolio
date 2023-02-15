@@ -3,20 +3,18 @@ import './contact.css'
 import { MdOutlineEmail } from 'react-icons/md'
 import { BsWhatsapp } from 'react-icons/bs'
 import emailjs from '@emailjs/browser';
-import env from "react-dotenv";
 
 
 const Contact = () => {
-    console.log(env);
 
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(env.SERVICE_ID, 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((result) => {
-                console.log(result.text);
+                console.log(result);
             }, (error) => {
                 console.log(error.text);
             });
