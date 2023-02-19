@@ -13,7 +13,7 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
-            .then((result) => {
+            .then(() => {
                 form.current.reset()
             }, (error) => {
                 console.log(error.text);
@@ -30,18 +30,18 @@ const Contact = () => {
                     <article className="contact_option">
                         <MdOutlineEmail className='contact_option-icon' />
                         <h4>Email</h4>
-                        <h5>test@gmail.com</h5>
-                        <a href="mailto:test@gmail.com" target="_blank" rel="noreferrer">Send a message</a>
+                        <h5>adarsht00001@gmail.com</h5>
+                        <a href="mailto:adarsht00001@gmail.com" target="_blank" rel="noreferrer">Send a message</a>
                     </article>
                     <article className="contact_option">
                         <BsWhatsapp className='contact_option-icon' />
                         <h4>WhatsApp</h4>
                         <h5>+</h5>
-                        <a href="https://api.whatsapp.com" target="_blank" rel="noreferrer">Send a message</a>
+                        <a href="https://api.whatsapp.com/send?phone=7994186032" target="_blank" rel="noreferrer">Send a message</a>
                     </article>
                 </div>
                 <form ref={form} onSubmit={sendEmail}>
-                    <input type="text" name='name' placeholder='Your Full Name' required />
+                    <input type="text" name='name' className='error' placeholder='Your Full Name' required />
                     <input type="email" name='email' placeholder='Your Email' required />
                     <textarea name='message' rows="7" placeholder='Your Message' required></textarea>
                     <button type='submit' className='btn btn-primary'>Send Message</button>
