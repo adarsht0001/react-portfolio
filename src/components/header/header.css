@@ -10,18 +10,18 @@ header {
 }
 
 .cta {
-    margin-top: 2.5rem;
+    margin-top: 4.5rem;
     display: flex;
     gap: 1.2rem;
     justify-content: center;
 }
 
 .header_socials{
-    margin-top: 2.5rem;
+    margin-top: 7.5rem;
     display: flex;
     justify-content: center;
     gap: 2rem;
-    bottom: 3rem;
+    bottom: 6rem;
 }
 
 .header_socials::after{
@@ -29,6 +29,7 @@ header {
     height: 2rem;
     background: var(--color-primary);
 }
+
 
 .scroll_down{
     position: absolute;

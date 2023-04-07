@@ -47,6 +47,13 @@ const Experience = () => {
                 <small className="text-light">Experienced</small>
               </div>
             </article>
+            <article className="experience_details">
+              <BsPatchCheckFill className='experience_details-icons'/>
+              <div>
+                <h4>Redux</h4>
+                <small className="text-light">Beginner</small>
+              </div>
+            </article>
           </div>
         </div>
         <div className="experience_backend">
@@ -77,7 +84,14 @@ const Experience = () => {
               <BsPatchCheckFill className='experience_details-icons'/>
               <div>
                 <h4>Firebase</h4>
-                <small className="text-light">Experienced</small>
+                <small className="text-light">Beginner</small>
+              </div>
+            </article>
+            <article className="experience_details">
+              <BsPatchCheckFill className='experience_details-icons'/>
+              <div>
+                <h4>Git/Github</h4>
+                <small className="text-light">Intermediate</small>
               </div>
             </article>
           </div>
