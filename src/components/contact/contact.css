@@ -58,6 +58,7 @@ textarea {
     box-shadow: 0 0 0.5em red;
 }
 
+
 @keyframes shake {
     0% {
         margin-left: 0rem;

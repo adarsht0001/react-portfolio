@@ -54,6 +54,13 @@ const Experience = () => {
                 <small className="text-light">Beginner</small>
               </div>
             </article>
+            <article className="experience_details">
+              <BsPatchCheckFill className='experience_details-icons'/>
+              <div>
+                <h4>Material Ui</h4>
+                <small className="text-light">Beginner</small>
+              </div>
+            </article>
           </div>
         </div>
         <div className="experience_backend">
@@ -92,6 +99,27 @@ const Experience = () => {
               <div>
                 <h4>Git/Github</h4>
                 <small className="text-light">Intermediate</small>
+              </div>
+            </article>
+            <article className="experience_details">
+              <BsPatchCheckFill className='experience_details-icons'/>
+              <div>
+                <h4>Socket.io</h4>
+                <small className="text-light">Intermediate</small>
+              </div>
+            </article>
+            <article className="experience_details">
+              <BsPatchCheckFill className='experience_details-icons'/>
+              <div>
+                <h4>TypeScript</h4>
+                <small className="text-light">Beginner</small>
+              </div>
+            </article>
+            <article className="experience_details">
+              <BsPatchCheckFill className='experience_details-icons'/>
+              <div>
+                <h4>EC2&CI/CD</h4>
+                <small className="text-light">Beginner</small>
               </div>
             </article>
           </div>

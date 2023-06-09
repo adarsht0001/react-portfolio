@@ -1,82 +1,78 @@
-import React from 'react'
-import './portfolio.css'
-import img1 from '../../assets/portfolio2.jpg'
-import img2 from '../../assets/portfolio3.jpg'
-import img3 from '../../assets/portfolio4.jpg'
-import img4 from '../../assets/portfolio5.png'
-import img5 from '../../assets/portfolio6.jpg'
+import React from "react";
+import "./portfolio.css";
+import eiser from "../../assets/Screenshot from 2023-06-10 03-07-22.png";
+import cambiame from "../../assets/Screenshot from 2023-06-10 03-18-23.png";
+import netflix from "../../assets/Screenshot from 2023-06-10 03-34-10.png";
 
-const data=[
-    {
-        id:1,
-        image:img1,
-        title:"eisejdk",
-        Github:'https://github.com',
-        demo:'eiser.tk'
-    },
-    {
-        id:2,
-        image:img2,
-        title:"eisejdk2",
-        Github:'https://github.com',
-        demo:'eiser.tk'
-    },
-    {
-        id:3,
-        image:img3,
-        title:"eisejdk",
-        Github:'https://github.com',
-        demo:'eiser.tk'
-    },
-    {
-        id:4,
-        image:img4,
-        title:"eisejdk",
-        Github:'https://github.com',
-        demo:'eiser.tk'
-    },
-    {
-        id:5,
-        image:img5,
-        title:"eisejdk",
-        Github:'https://github.com',
-        demo:'eiser.tk'
-    },
-    {
-        id:6,
-        image:img1,
-        title:"eisejdk",
-        Github:'https://github.com',
-        demo:'eiser.tk'
-    }
-]
+const data = [
+  {
+    id: 1,
+    image: eiser,
+    title: "eiser.tk",
+    Github: "https://github.com/adarsht0001/eiser-ecommerce",
+    demo: "https://eiser.tk/",
+    description:
+      "Build an e-commerce project with Node.js, Express Generator, MongoDB, HBS, Twilio, Razorpay, and PayPal for seamless product listings, shopping cart, and secure payment integration",
+  },
+  {
+    id: 2,
+    image: cambiame,
+    title: "cambiame",
+    Github: "https://github.com/adarsht0001/Cambiame",
+    demo: "https://cambiame.site/",
+    description:
+      "Build a comprehensive social media web app with React, Node.js, MongoDB, Express, TypeScript, Clean Architecture, AWS S3, MUI, Redux, and Socket.io for seamless user interactions.",
+  },
+  {
+    id: 3,
+    image: netflix,
+    title: "Netflix Clone",
+    Github: "https://github.com/adarsht0001/netflix",
+    demo: "https://adarsht0001.github.io/netflix/",
+    description:
+      "Developed a Netflix clone using React, leveraging the TMDB API and Axios library, to create an immersive and user-friendly web application for browsing, streaming, and discovering a vast collection of movies and TV shows.",
+  },
+];
 
 const Portfolio = () => {
   return (
-    <section id='portfolio'>
-        <h5>My Recent Works</h5>
-        <h2>Portfolio</h2>
+    <section id="portfolio">
+      <h5>My Recent Works</h5>
+      <h2>Portfolio</h2>
 
-        <div className="container portfolio_container">
-            {
-                data.map(({id,image,title,Github,demo})=>{
-                    return(
-            <article key={id} className='portfolio_item'>
-                <div className="portfolio_item-image">
-                    <img src={image} alt={title} />
-                </div>
-                <h3>{title}</h3>
-                <div className='portfolio_item-cta'>
-                <a href={Github} className='btn' target='_blank' rel="noreferrer">Github</a>
-                <a href={demo} className='btn btn-primary' target='_blank' rel="noreferrer">Live Demo</a>
-                </div>
+      <div className="container portfolio_container">
+        {data.map(({ id, image, title, Github, demo, description }) => {
+          return (
+            <article key={id} className="portfolio_item">
+              <div className="portfolio_item-image">
+                <img src={image} alt={title} height="300px" />
+              </div>
+              <h3>{title}</h3>
+              <h5>{description}</h5>
+              <div className="portfolio_item-cta">
+                <a
+                  href={Github}
+                  className="btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Github
+                </a>
+                <a
+                  href={demo}
+                  className="btn btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live Demo
+                </a>
+              </div>
             </article>
-                    )
-                })
-            }
-        </div>
+          );
+        })}
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;
